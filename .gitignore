@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.wrangler/
+.next/
+.vinext/
+.DS_Store
+*.log
+.env
+.env.local
+.env.*.local

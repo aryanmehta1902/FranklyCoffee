@@ -95,7 +95,13 @@ a {
 .wordmark {
   font-size: 15px;
   white-space: nowrap;
-  text-transform: uppercase;
+}
+
+.wordmark-lower {
+  display: inline-block;
+  font-size: 1.36em;
+  line-height: 0;
+  transform: translateY(0.04em);
 }
 
 .brand:hover,

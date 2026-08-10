@@ -214,6 +214,19 @@ a {
   background-position: center 46%;
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.22;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)' opacity='.62'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  mix-blend-mode: soft-light;
+  animation: hero-grain 0.7s steps(2, end) infinite;
+}
+
 .hero-card {
   width: min(500px, 88vw);
   padding: clamp(28px, 5vw, 58px);
@@ -622,6 +635,14 @@ footer {
   52%, 86% { opacity: 0; }
 }
 
+@keyframes hero-grain {
+  0% { background-position: 0 0; }
+  25% { background-position: 13px -9px; }
+  50% { background-position: -11px 15px; }
+  75% { background-position: 8px 7px; }
+  100% { background-position: -5px -12px; }
+}
+
 @media (max-width: 800px) {
   .hero {
     background-image: url("/photos/storefront.jpg");
@@ -795,6 +816,7 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .scroll-note span { animation: none; }
+  .hero::before { animation: none; }
   .story-bg-night { animation: none; }
   .menu-bg-cups { animation: none; }
   .parallax-bg img { transform: scale(1.04); }

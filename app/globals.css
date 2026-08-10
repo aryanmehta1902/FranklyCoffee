@@ -95,6 +95,7 @@ a {
 .wordmark {
   font-size: 15px;
   white-space: nowrap;
+  text-transform: uppercase;
 }
 
 .brand:hover,

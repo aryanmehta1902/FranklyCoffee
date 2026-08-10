@@ -67,7 +67,7 @@ export function SiteChrome() {
     <header className={`topbar${scrolled ? " scrolled" : ""}`}>
       <a className="brand" href="#home" aria-label="Frankly Coffee home">
         <img src="/logo.png" alt="" />
-        <span className="wordmark" aria-label="Frankly Coffee">FRaNKLY COFFee</span>
+        <span className="wordmark" aria-label="Frankly Coffee">FRANKLY COFFEE</span>
       </a>
       <a className="menu-button" href="#menu">Menu</a>
     </header>

@@ -616,23 +616,6 @@ footer {
   text-shadow: 0 1px 7px #000;
 }
 
-.footer-contact-link {
-  color: inherit;
-  padding-bottom: 3px;
-  border-bottom: 1px solid currentColor;
-  transition: color 180ms ease, transform 180ms ease;
-}
-
-.footer-contact-link:hover,
-.footer-contact-link:focus-visible {
-  color: var(--mustard);
-  transform: translateY(-2px);
-}
-
-.contact-page {
-  min-height: 100svh;
-}
-
 .contact-hero {
   position: relative;
   isolation: isolate;
@@ -657,7 +640,7 @@ footer {
   transform: rotate(-.45deg);
 }
 
-.contact-card h1 {
+.contact-card h2 {
   margin: 0;
   color: var(--ink);
   font-family: Georgia, "Times New Roman", serif;
@@ -667,7 +650,7 @@ footer {
   line-height: .87;
 }
 
-.contact-card h1 em {
+.contact-card h2 em {
   color: var(--green);
   font-weight: 400;
 }
@@ -782,7 +765,7 @@ footer {
     padding: 32px 27px;
   }
 
-  .contact-card h1 {
+  .contact-card h2 {
     font-size: clamp(52px, 17vw, 76px);
   }
 

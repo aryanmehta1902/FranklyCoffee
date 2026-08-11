@@ -28,20 +28,12 @@ test("renders the complete Frankly Coffee landing page", async () => {
   assert.match(html, /coffee-machine\.jpg/);
   assert.match(html, /sunlit-cups\.jpg/);
   assert.match(html, /patio\.jpg/);
-  assert.match(html, /727½ W Colorado Ave/);
-  assert.match(html, /Mon–Fri · 6:30–3/);
-  assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/);
-  assert.ok(html.indexOf("A little backstory") < html.indexOf("The essentials"));
-});
-
-test("renders the Frankly Coffee contact page", async () => {
-  const response = await render("/contact");
-  assert.equal(response.status, 200);
-  const html = await response.text();
-
-  assert.match(html, /Contact \| Frankly Coffee/);
   assert.match(html, /franklycoffee\.co/);
   assert.match(html, /\(719\) 900-3372/);
   assert.match(html, /aria-label="Frankly Coffee on Instagram"/);
   assert.match(html, /aria-label="Frankly Coffee on Facebook"/);
+  assert.match(html, /727½ W Colorado Ave/);
+  assert.match(html, /Mon–Fri · 6:30–3/);
+  assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/);
+  assert.ok(html.indexOf("A little backstory") < html.indexOf("The essentials"));
 });

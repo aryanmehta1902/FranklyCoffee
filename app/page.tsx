@@ -136,7 +136,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <footer>© <span className="footer-wordmark">FRaNKLY COFFee</span> · Made with care</footer>
+        <footer>
+          <span>
+            © <span className="footer-wordmark">FR<span className="wordmark-lower">a</span>NKLY COFF<span className="wordmark-lower">ee</span></span> · Made with care
+          </span>
+          <a className="footer-contact-link" href="/contact">Contact</a>
+        </footer>
       </section>
     </main>
   );

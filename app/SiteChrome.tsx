@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-export function SiteChrome() {
+export function SiteChrome({ page = "home" }: { page?: "home" | "contact" }) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -65,13 +65,15 @@ export function SiteChrome() {
 
   return (
     <header className={`topbar${scrolled ? " scrolled" : ""}`}>
-      <a className="brand" href="#home" aria-label="Frankly Coffee home">
+      <a className="brand" href={page === "contact" ? "/" : "#home"} aria-label="Frankly Coffee home">
         <img src="/logo.png" alt="" />
         <span className="wordmark" aria-label="Frankly Coffee">
           FR<span className="wordmark-lower">a</span>NKLY COFF<span className="wordmark-lower">ee</span>
         </span>
       </a>
-      <a className="menu-button" href="#menu">Menu</a>
+      <a className="menu-button" href={page === "contact" ? "/" : "#menu"}>
+        {page === "contact" ? "Home" : "Menu"}
+      </a>
     </header>
   );
 }

@@ -755,8 +755,8 @@ footer {
   }
 
   .contact-hero {
-    place-items: end center;
-    padding: 105px 16px 34px;
+    place-items: center;
+    padding: 96px 16px 52px;
     background-position: 58% center;
   }
 
